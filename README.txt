@@ -1,0 +1,30 @@
+- Для формирования config.json файла запускаем parser_categories_and_manufacturers.py. Внутри файла на строке 137 задаем время парсинга в параметре hour=ваше число от 0 до 23, minute=ваше число от 0 до 59. Для этого скрипта требуется файлы - соответствия.csv с разделителем - ;, файл list_all_manufacturers.py, файл categories_dict.py.
+
+- Основной парсер ожидает файл final_config.json. В нем должна содержатся следующая информация.
+1) В ключе parsing_all_site по умолчанию False. Если нужно парсить все товары сайта ScaleBay поставьте True
+2) В ключе 'parsing_time',нужно оставить 1 словарь(режим парсинга). Если выбрать  ключ 'everyday' и задать hour - число от 0 до 23  и minute - число от 0 до 59 - в этом случае парсинг будет ежедневно. Если выбрать ключ 'interval' и задать hour - число от 1 до 23 в этом случае парсинг каждые N-ое колличество часов.
+3) В ключе time_trade число, время до окончания торгов пример - 24
+4) В ключе markup число, наценка (проценты) пример  - 30
+5) В ключе price_delivery число, стоимость доставки (в рублях) пример - 300
+6) В ключе condition оставляете слова которые нужно парсить либо Новый либо Б/у либо оставить все как есть если нужно парсить оба состояния. пример - ["Новый", "Б/у"]
+7) В ключе categories нужно оставить ссылки на категории которые НУЖНО ПАРСИТЬ должен быть список - пример
+["https://scalebay.ru/category/masshtabnye-modeli_otechestvennye-avtomobili", "https://scalebay.ru/category/sbornye-modeli_avtomobili"]
+8) В ключе unnecessary_manufacturers добавить только тех производителей которые НЕ НУЖНО ПАРСИТЬ.
+2) В ключе all_manufacturers содержатся все производители продавцов которые были изменены на нужные из файла соответствия.csv. Этот словарь не трогать, он остается как есть.
+
+
+
+Все библиотеки необходимые для скриптов.
+pip install aiohttp
+pip install openpyxl
+pip install requests
+pip install playwright
+playwright install firefox
+pip install openpyxl
+pip install apscheduler
+pip install bs4
+pip install loguru
+pip install tqdm
+
+
+
