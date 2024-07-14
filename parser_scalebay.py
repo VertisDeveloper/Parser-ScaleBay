@@ -66,6 +66,7 @@ class ParserScaleBaySync:
         return session
 
     @property
+    @logger.catch()
     def new_cookies(self) -> dict:
         with sync_playwright() as playwright:
             browser = playwright.firefox.launch(headless=True)
@@ -81,6 +82,7 @@ class ParserScaleBaySync:
         return cookies
 
     @property
+    @logger.catch()
     def read_config(self) -> dict:
         with open('final_config.json', 'r', encoding='utf-8') as file:
             json_config = json.load(file)
