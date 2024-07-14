@@ -1,4 +1,3 @@
-"""Файл пример, ссылки на продавцов которые нужно парсить. parser_categories_and_manufacturers ждет именно этот файл"""
 https://scalebay.ru/other-items/ural96/58
 https://scalebay.ru/other-items/demprice/14121
 https://scalebay.ru/other-items/tiger99/619
