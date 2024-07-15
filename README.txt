@@ -7,7 +7,7 @@
 Оба режима ждут setting файл  - final_config.json.
 
 
-Все библиотеки необходимые для скриптов.
+Все сторонние библиотеки необходимые для скриптов.
 pip install aiohttp
 pip install openpyxl
 pip install requests
