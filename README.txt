@@ -1,8 +1,8 @@
 Парсер (parser_scalebay.py) создан для сбора данных товаров  с сайта - https://scalebay.ru. 
 Собирает такие данные как - (Название, Ссылки на картинки, Номер лота, Блиц цена, Марка, Производитель, Масштаб, Материал, Артикул, Состояние, Описание, Колличество товара, Ссылка на продавца, Ник продавца).
 Есть 2 режима работы:
-1) Парсинг по ссылкам продавцов - links_sellers.txt. Сохраняет в файл формата CSV
-2) Парсинг всего ассортимента сайта. Сохраняет в файл формата XLSX
+1) Парсинг по ссылкам продавцов - links_sellers.txt. Результат сохраняет в файл формата CSV
+2) Парсинг всего ассортимента сайта. Результат сохраняет в файл формата XLSX
 
 Оба режима ждут setting файл  - final_config.json.
 
@@ -13,7 +13,6 @@ pip install openpyxl
 pip install requests
 pip install playwright
 playwright install firefox
-pip install openpyxl
 pip install apscheduler
 pip install bs4
 pip install loguru
